@@ -1,0 +1,21 @@
+quantity,value,unit
+sector,11,TESS sector
+period_days,3.81673,days; NASA Exoplanet Archive
+duration_hours,1.805,hours; NASA Exoplanet Archive
+quality_filtered_cadences,11701,count
+symmetric_outliers_clipped,0,count
+n_points,1082,
+n_in_transit,217,
+n_out_of_transit,865,
+depth_ppm,503.414179544,
+depth_error_ppm,37.9525841452,
+depth_snr,13.2642925609,
+chi_square_flat,2254.8939902,
+dof_flat,1081,
+p_value_flat,7.43487952594e-85,
+chi_square_box,2078.95253306,
+dof_box,1080,
+p_value_box,8.59381237524e-66,
+delta_chi_square,175.941457141,
+delta_dof,1,
+p_value_improvement,3.72923462152e-40,

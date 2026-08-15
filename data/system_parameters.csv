@@ -1,0 +1,2 @@
+pl_name,hostname,ra,dec,pl_orbper,pl_tranmid,pl_trandur,pl_rade,pl_bmasse,pl_eqt,pl_orbsmax,sy_dist,sy_tmag,st_teff,st_rad,st_mass,disc_year,discoverymethod,disc_refname,disc_pubdate,disc_facility
+TOI-836 b,TOI-836,225.0798831,-24.4542022,3.81673,2458599.9953,1.805,1.704,4.53,871.0,0.0422,27.5024,8.6486,4552.0,0.665,0.678,2023,Transit,<a refstr=HAWTHORN_ET_AL_2023 href=https://ui.adsabs.harvard.edu/abs/2023MNRAS.520.3649H/abstract target=ref>Hawthorn et al. 2023</a>,2023-04,Transiting Exoplanet Survey Satellite (TESS)

@@ -20,6 +20,8 @@ ephemeris; one reproducible flat-versus-box statistical comparison.
 ```bash
 pip install -r requirements.txt
 python scripts/analyze_transit.py
+python scripts/analyze_multisector.py
+python scripts/analyze_spectrum.py
 pytest tests/ -v
 ```
 
@@ -42,6 +44,30 @@ a two-level box whose depth is fitted. Timing and duration are not searched.
 The fixed-window box improves strongly on a flat light curve for these data. This establishes only how these archived fluxes compare with this
 pre-specified box model. It does not independently confirm the planet or identify
 an atmosphere.
+
+<!-- MULTISECTOR-UPGRADE-START -->
+## Multi-sector robustness and correlated noise
+
+The fixed archive ephemeris was fitted independently in 2 usable sector(s) (S11, S38). Formal depth errors were inflated by sqrt(max(reduced chi-square, 1)) times the residual time-averaging beta factor (observed range 3.25-4.54). The robust inverse-variance depth is 497.4 +/- 141.3 ppm; Cochran Q = 0.00 for 1 dof (p = 0.9504). These scaled errors address underestimated scatter and short-timescale correlation, but they are not a full Gaussian-process or physical limb-darkened transit fit.
+
+<p align="center"><img src="figures/toi836b_multisector_transits.png" alt="Independent sector transit fits for TOI-836 b" width="760"></p>
+
+<p align="center"><img src="figures/toi836b_depth_consistency.png" alt="Sector depth consistency for TOI-836 b" width="760"></p>
+
+<p align="center"><img src="figures/toi836b_noise_diagnostics.png" alt="Residual RMS time-averaging diagnostic for TOI-836 b" width="760"></p>
+
+The per-sector table is in [`figures/multisector_statistics.csv`](figures/multisector_statistics.csv). Regenerate all three figures with `python scripts/analyze_multisector.py`.
+<!-- MULTISECTOR-UPGRADE-END -->
+
+<!-- SPECTRUM-UPGRADE-START -->
+## Published planetary spectrum
+
+<p align="center"><img src="figures/toi836b_published_spectrum.png" alt="Published transmission spectrum of TOI-836 b" width="760"></p>
+
+Across 106 bins, a weighted-flat spectrum gives chi-square/dof = 128.4/105 (p = 0.0599). At a 5% threshold this simple test does not reject flatness. Four published metallicity-grid spectra are also compared with one fitted vertical offset; these goodness-of-fit checks do not constitute a metallicity retrieval.
+
+Source: [10.5281/zenodo.10658637](https://zenodo.org/records/10658637) (JWST NIRSpec/G395H). Exact files and checksums are in [`data/SOURCE.md`](data/SOURCE.md); complete numerical results are in [`figures/spectrum_statistics.csv`](figures/spectrum_statistics.csv).
+<!-- SPECTRUM-UPGRADE-END -->
 
 ## System context
 

@@ -5,4 +5,5 @@ scipy>=1.10
 pytest>=7.0
 xarray>=2024.1
 netCDF4>=1.6
+setuptools>=68
 batman-package>=2.5

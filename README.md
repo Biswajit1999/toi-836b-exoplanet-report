@@ -1,10 +1,20 @@
-# TOI-836 b — Real TESS Transit Report
+# TOI-836 b: What a Flat JWST Spectrum Can Rule Out
 
+<!-- TARGET-IDENTITY-START -->
+<p align="center">
+  <img src="assets/artist_concept.webp" alt="Artist's interpretation of TOI-836 b near its host star" width="900">
+</p>
+
+<p align="center"><em>AI-generated artist's interpretation informed by the measured system properties; not a direct image.</em></p>
+
+**Rocky super-Earth · flat transmission spectrum · JWST + TESS**
+
+A 1.7-Earth-radius planet whose precise JWST spectrum shows no resolved molecular features, yet excludes a clear low-metallicity hydrogen-dominated atmosphere.
+<!-- TARGET-IDENTITY-END -->
 <p align="center">
   <img src="figures/toi836b_tess_transit.png" alt="Phase-folded real TESS transit light curve of TOI-836 b" width="760">
 </p>
 
-One real public TESS SPOC light curve; one historical NASA Exoplanet Archive ephemeris; one timing-adjusted, limb-darkened transit fit.
 
 **[Open the full report](https://biswajit1999.github.io/toi-836b-exoplanet-report/)** — the live GitHub Pages version.
 
@@ -21,6 +31,7 @@ pip install -r requirements.txt
 python scripts/analyze_transit.py
 python scripts/analyze_multisector.py
 python scripts/analyze_spectrum.py
+python scripts/analyze_atmospheric_evidence.py
 pytest tests/ -v
 ```
 
@@ -66,6 +77,22 @@ Across 106 bins, a weighted-flat spectrum gives chi-square/dof = 128.4/105 (p = 
 
 Source: [10.5281/zenodo.10658637](https://zenodo.org/records/10658637) (JWST NIRSpec/G395H). Exact files and checksums are in [`data/SOURCE.md`](data/SOURCE.md); complete numerical results are in [`figures/spectrum_statistics.csv`](figures/spectrum_statistics.csv).
 <!-- SPECTRUM-UPGRADE-END -->
+
+<!-- ATMOSPHERE-EVIDENCE-START -->
+## Atmospheric evidence: detection, limit, or unknown?
+
+<p align="center"><img src="figures/molecular_evidence.png" alt="Source-graded atmospheric evidence for TOI-836 b" width="820"></p>
+
+This is a high-value null result. The public spectrum is statistically consistent with a flat line, so it does not identify H2O, CO2, CO, CH4, or O2. Under the paper's 0.1-bar opaque-pressure assumption, it excludes clear atmospheres below 250 times solar metallicity and mean molecular weight below about 6 g/mol.
+
+| Species | Status | Evidence | Basis |
+|---|---|---|---|
+| H2-rich atmosphere | model space excluded | <250x solar excluded | for a 0.1-bar opaque pressure level |
+| H2O / CO2 / CO / CH4 | not detected | flat 2.8-5.2 micron spectrum | no resolved molecular feature |
+| O2 | no evidence | not constrained | flat spectrum is not an oxygen detection |
+
+Primary source: [Alderson et al. 2024, JWST COMPASS](https://arxiv.org/abs/2404.00093). The table is also available as [`data/atmospheric_evidence.csv`](data/atmospheric_evidence.csv). Oxygen-bearing species such as H2O, CO2, and SO2 are **not** evidence for molecular oxygen (O2) or a biosignature.
+<!-- ATMOSPHERE-EVIDENCE-END -->
 
 ## System context
 

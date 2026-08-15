@@ -1,0 +1,4 @@
+species,status,evidence,basis,source_label,source_url
+H2-rich atmosphere,model space excluded,<250x solar excluded,for a 0.1-bar opaque pressure level,"Alderson et al. 2024, JWST COMPASS",https://arxiv.org/abs/2404.00093
+H2O / CO2 / CO / CH4,not detected,flat 2.8-5.2 micron spectrum,no resolved molecular feature,"Alderson et al. 2024, JWST COMPASS",https://arxiv.org/abs/2404.00093
+O2,no evidence,not constrained,flat spectrum is not an oxygen detection,"Alderson et al. 2024, JWST COMPASS",https://arxiv.org/abs/2404.00093

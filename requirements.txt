@@ -2,6 +2,7 @@ astropy>=6.0,<9
 matplotlib>=3.7,<4
 numpy>=1.24,<3
 scipy>=1.10,<2
+setuptools>=68,<85
 pytest>=7,<10
 ruff>=0.15,<1
 xarray>=2024.1,<2027

@@ -11,7 +11,6 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
-
 ROOT = Path(__file__).resolve().parents[1]
 INPUT = ROOT / "data" / "atmospheric_evidence.csv"
 OUTPUT = ROOT / "figures" / "molecular_evidence.png"

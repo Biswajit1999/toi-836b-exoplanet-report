@@ -2,8 +2,8 @@
 
 from pathlib import Path
 
-import numpy as np
 import analyze_multisector as multi
+import numpy as np
 
 
 def test_all_committed_spoc_files_are_accounted_for():

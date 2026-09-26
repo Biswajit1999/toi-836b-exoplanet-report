@@ -10,11 +10,13 @@ the result is a reproducible diagnostic fit, not a precision global retrieval.
 from __future__ import annotations
 
 import csv
+from itertools import pairwise
 from pathlib import Path
 
-from astropy.io import fits
 import batman
 import matplotlib
+from astropy.io import fits
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
@@ -166,7 +168,7 @@ def compare_models(time: np.ndarray, flux: np.ndarray, error: np.ndarray) -> dic
 
 def binned_curve(offset: np.ndarray, flux: np.ndarray, error: np.ndarray, bins: int = 70):
     edges = np.linspace(offset.min(), offset.max(), bins + 1); centers, means, uncertainties = [], [], []
-    for left, right in zip(edges[:-1], edges[1:]):
+    for left, right in pairwise(edges):
         chosen = (offset >= left) & (offset < right)
         if not chosen.any(): continue
         weights = 1 / error[chosen]**2

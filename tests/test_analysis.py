@@ -1,12 +1,13 @@
 """Regression tests for the timing-adjusted real-data transit fit."""
 
 import json
-import numpy as np
+
 import analyze_transit as analysis
+import numpy as np
 
 
 def test_real_fits_loads_and_physical_fit_converges():
-    time, flux, error, clipped = analysis.load_light_curve()
+    time, flux, error, _clipped = analysis.load_light_curve()
     assert len(time) > 100 and np.all(np.isfinite(flux)) and np.all(error > 0)
     result = analysis.compare_models(time, flux, error)
     assert result["fit_success"]

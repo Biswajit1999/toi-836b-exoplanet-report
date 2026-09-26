@@ -11,15 +11,14 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
-from astropy.io import fits
 import matplotlib
+from astropy.io import fits
+
 matplotlib.use("Agg")
+import analyze_transit as base
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import chi2
-
-import analyze_transit as base
-
 
 STATS_FILE = base.FIG_DIR / "multisector_statistics.csv"
 STEM = base.FIGURE_FILE.stem.replace("_tess_transit", "")

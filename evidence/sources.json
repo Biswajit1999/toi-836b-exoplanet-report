@@ -1,0 +1,76 @@
+{
+  "project": "TOI-836 b: What a Flat JWST Spectrum Can Rule Out",
+  "repository": "https://github.com/Biswajit1999/toi-836b-exoplanet-report",
+  "files": [
+    {
+      "label": "Data source notes",
+      "path": "data/SOURCE.md",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Project methods",
+      "path": "docs/METHODS.md",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Atmospheric evidence",
+      "path": "data/atmospheric_evidence.csv",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "System parameters",
+      "path": "data/system_parameters.csv",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Tess2019112060037 s0011 0000000440887364 0143 s lc",
+      "path": "data/tess2019112060037-s0011-0000000440887364-0143-s_lc.fits",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Tess2021118034608 s0038 0000000440887364 0209 s lc",
+      "path": "data/tess2021118034608-s0038-0000000440887364-0209-s_lc.fits",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Summary statistics",
+      "path": "figures/summary_statistics.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Spectrum diagnostics",
+      "path": "figures/spectrum_diagnostics.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Spectrum statistics",
+      "path": "figures/spectrum_statistics.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Multisector statistics",
+      "path": "figures/multisector_statistics.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Toi836b published spectrum",
+      "path": "figures/toi836b_published_spectrum.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Toi836b spectrum residuals",
+      "path": "figures/toi836b_spectrum_residuals.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Molecular evidence",
+      "path": "figures/molecular_evidence.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Toi836b depth consistency",
+      "path": "figures/toi836b_depth_consistency.png",
+      "role": "Figures"
+    }
+  ]
+}
